@@ -1,0 +1,121 @@
+﻿@model WriteVM
+
+@{
+    ViewBag.Title = "AddWrite";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AddWrite</h2>
+
+
+<style>
+    .genislik {
+        width: 300px;
+    }
+</style>
+
+@using (Html.BeginForm("AddWrite", "Write", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Kategori Ekleme Sayfası
+                </header>
+
+                <div class="panel-body">
+
+
+                    <div class="form-group">
+                        <label class="col-sm-2">Yazar Isim</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Write.Name, new { @class = "form-control genislik" })
+
+                        </div>
+                    </div>
+
+
+                    <br /> <br />
+
+                    <div class="form-group">
+                        <label class="col-sm-2">Yazar Soyismi</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Write.LastName, new { @class = "form-control genislik" })
+
+                        </div>
+                    </div>
+
+
+                    <br /> <br />
+                    <div class="form-group">
+                        <label class="col-sm-2">Yazar Mail</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Write.WriteMail, new { @class = "form-control genislik" })
+
+                        </div>
+                    </div>
+
+
+                    <br /> <br />
+                    <div class="form-group">
+                        <label class="col-sm-2">Yazar Şifre</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Write.WritePassword, new { @class = "form-control genislik" })
+
+                        </div>
+                    </div>
+
+
+                    <br /> <br />
+                    <div class="form-group">
+                        <label class="col-sm-2">Yazar Image</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Write.WriteImage, new { @class = "form-control genislik" })
+
+                        </div>
+                    </div>
+
+
+                    <br /> <br />
+                    <div class="form-group">
+                        <label class="col-sm-2">Yazar Title</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Write.WriteTitle, new { @class = "form-control genislik" })
+
+                        </div>
+                    </div>
+
+
+                    <br /> <br />
+                    <div class="form-group">
+                        <label class="col-sm-2">Yazar About</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Write.WriteAbout, new { @class = "form-control genislik" })
+
+                        </div>
+                    </div>
+
+
+                    <br /> <br />
+
+                    <div class="form-group">
+                        <label class="col-sm-2">İşlem : </label>
+                        <div class="col-sm-10">
+                            <button class="btn btn-primary">Ekle</button>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+}

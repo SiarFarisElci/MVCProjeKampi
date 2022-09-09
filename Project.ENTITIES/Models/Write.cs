@@ -23,19 +23,26 @@ namespace Project.ENTITIES.Models
             }
         }
         [StringLength(100)]
+        public string WriteAbout { get; set; }
 
-        public string WriteImage { get; set; }
         [StringLength(100)]
+        public string WriteImage { get; set; }
+        [StringLength(200)]
 
         public string WriteMail { get; set; }
-        [StringLength(20)]
+        [StringLength(200)]
 
         public string WritePassword { get; set; }
 
+        [StringLength(50)]
+
+        public string WriteTitle { get; set; }
         //Relational Properties
         public virtual List<Heading>  Headings { get; set; }
 
         public virtual List<Content>  Contents { get; set; }
+
+
 
     }
 }
