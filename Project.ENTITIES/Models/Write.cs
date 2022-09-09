@@ -25,7 +25,7 @@ namespace Project.ENTITIES.Models
         [StringLength(100)]
         public string WriteAbout { get; set; }
 
-        [StringLength(100)]
+        [StringLength(250)]
         public string WriteImage { get; set; }
         [StringLength(200)]
 
