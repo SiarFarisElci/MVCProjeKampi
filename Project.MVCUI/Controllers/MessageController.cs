@@ -1,4 +1,6 @@
-﻿using Project.BLL.DesingPatterns.GenericRepository.ConcRep;
+﻿using FluentValidation.Results;
+using Project.BLL.DesingPatterns.GenericRepository.ConcRep;
+using Project.BLL.ValidationRules;
 using Project.ENTITIES.Models;
 using Project.MVCUI.VMClasses;
 using System;
@@ -12,6 +14,7 @@ namespace Project.MVCUI.Controllers
     public class MessageController : Controller
     {
         MessageRepository _mRep;
+        MessageValidation mv = new MessageValidation(); 
 
         public MessageController()
         {
@@ -44,9 +47,42 @@ namespace Project.MVCUI.Controllers
         [HttpPost]
         public ActionResult AddMessage(Message message)
         {
-            _mRep.Add(message);
+            ValidationResult result = mv.Validate(message);
+            if (result.IsValid)
+            {
+                _mRep.Add(message);
+                return RedirectToAction("SendBox");
 
-            return RedirectToAction("Inbox");
+
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+        }
+
+        public ActionResult GetInboxMessageDetail(int id)
+        {
+            MessageVM cvm = new MessageVM
+            {
+                Message = _mRep.Find(id)
+            };
+
+            return View(cvm);
+        }
+
+        public ActionResult GetSendMessageDetail(int id)
+        {
+            MessageVM cvm = new MessageVM
+            {
+                Message = _mRep.Find(id)
+            };
+
+            return View(cvm);
         }
     }
 }
