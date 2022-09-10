@@ -1,0 +1,57 @@
+﻿@model AboutVM
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+
+<section class="panel">
+
+    <div class="panel-body">
+        <div class="adv-table">
+            <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+                <thead>
+                    <tr>
+                        <th> ID</th>
+                        <th>Detail1</th>
+                        <th class="hidden-phone">Detail2</th>
+                        <th class="hidden-phone">Gorsel1</th>
+                        <th class="hidden-phone">Gorsel2</th>
+                        <th class="hidden-phone">Durum</th>
+                        <th class="hidden-phone">Sil</th>
+                        <th class="hidden-phone">Güncelle</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (About item in Model.Abouts)
+                    {
+                        <tr class="gradeX">
+                            <td>@item.ID</td>
+                            <td>
+                                @item.AboutDetail1
+                            </td>
+                            <td class="hidden-phone">@item.AboutDetail2</td>
+                            <td class="hidden-phone">@item.AboutImage1</td>
+                            <td class="hidden-phone">@item.AboutImage2</td>
+                            <td class="center hidden-phone">@item.Status</td>
+                            <td class="center hidden-phone"> @Html.ActionLink("Sil", "DeleteCategory", new { id = item.ID }, new { @class = "btn btn-danger" })  </td>
+                            <td class="center hidden-phone">  @Html.ActionLink("Güncelle", "UpdateCategory", new { id = item.ID }, new { @class = "btn btn-warning" })  </td>
+                        </tr>
+                    }
+
+
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</section>
+
+@Html.Action("AboutPartial", "About")

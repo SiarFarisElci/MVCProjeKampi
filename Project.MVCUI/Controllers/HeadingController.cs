@@ -25,7 +25,7 @@ namespace Project.MVCUI.Controllers
         {
             HeadingVM hvm = new HeadingVM
             {
-                Headings = _hRep.GetActives(),
+                Headings = _hRep.GetAll(),
                 Categories = _cRep.GetActives(),
                 Writes = _wRep.GetActives()
             };
@@ -50,5 +50,31 @@ namespace Project.MVCUI.Controllers
             _hRep.Add(heading);
             return RedirectToAction("ListHeading");
         }
+
+        public ActionResult EditHeading(int id)
+        {
+            HeadingVM hvm = new HeadingVM
+            {
+                Heading = _hRep.Find(id),
+                Categories = _cRep.GetActives(),
+                Writes = _wRep.GetActives()
+            };
+
+            return View(hvm);
+        }
+
+        [HttpPost]
+        public ActionResult EditHeading(Heading heading)
+        {
+            _hRep.Update(heading);
+            return RedirectToAction("ListHeading");
+        }
+
+        public ActionResult DeleteHeading(int id)
+        {
+            _hRep.Delete(_hRep.Find(id));
+            return RedirectToAction("ListHeading");
+        }
+       
     }
 }

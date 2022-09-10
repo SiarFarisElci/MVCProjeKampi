@@ -136,8 +136,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\WriteController.cs" />
@@ -145,7 +147,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VMClasses\AboutVM.cs" />
     <Compile Include="VMClasses\CategoryVM.cs" />
+    <Compile Include="VMClasses\ContentVM.cs" />
     <Compile Include="VMClasses\HeadingVM.cs" />
     <Compile Include="VMClasses\WriteVM.cs" />
   </ItemGroup>
@@ -2284,6 +2288,10 @@
     <Content Include="Views\Write\EditWriter.cshtml" />
     <Content Include="Views\Heading\ListHeading.cshtml" />
     <Content Include="Views\Heading\AddHeading.cshtml" />
+    <Content Include="Views\Content\ContentHeading.cshtml" />
+    <Content Include="Views\Heading\EditHeading.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\AboutPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
