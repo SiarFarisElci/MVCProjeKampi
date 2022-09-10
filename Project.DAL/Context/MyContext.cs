@@ -24,9 +24,11 @@ namespace Project.DAL.Context
             modelBuilder.Configurations.Add(new ContentMap());
             modelBuilder.Configurations.Add(new AboutMap());
             modelBuilder.Configurations.Add(new HeadingMap());
+            modelBuilder.Configurations.Add(new MessageMap());
         }
 
         public DbSet<Write>  Writes { get; set; }
+        public DbSet<Message>   Messages { get; set; }
         public DbSet<Category>   Categories  { get; set; }
         public DbSet<Contact>   Contacts { get; set; }
         public DbSet<Content>   Contents { get; set; }

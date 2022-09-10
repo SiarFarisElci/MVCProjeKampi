@@ -66,11 +66,14 @@
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\ContactRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\ContentRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\HeadingRepository.cs" />
+    <Compile Include="DesingPatterns\GenericRepository\ConcRep\MessageRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\WriteRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\InRep\IRepository.cs" />
     <Compile Include="DesingPatterns\SingletonPattern\DBTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRules\CategoryValidator.cs" />
+    <Compile Include="ValidationRules\ContactValidator.cs" />
+    <Compile Include="ValidationRules\MessageValidation.cs" />
     <Compile Include="ValidationRules\WriteValidator.cs" />
   </ItemGroup>
   <ItemGroup>

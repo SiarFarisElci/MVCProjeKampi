@@ -139,8 +139,10 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\WriteController.cs" />
     <Compile Include="Global.asax.cs">
@@ -149,8 +151,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VMClasses\AboutVM.cs" />
     <Compile Include="VMClasses\CategoryVM.cs" />
+    <Compile Include="VMClasses\ContactVM.cs" />
     <Compile Include="VMClasses\ContentVM.cs" />
     <Compile Include="VMClasses\HeadingVM.cs" />
+    <Compile Include="VMClasses\MessageVM.cs" />
     <Compile Include="VMClasses\WriteVM.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2292,6 +2296,12 @@
     <Content Include="Views\Heading\EditHeading.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\About\AboutPartial.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\GetContactDetail.cshtml" />
+    <Content Include="Views\Contact\MessageList.cshtml" />
+    <Content Include="Views\Message\Inbox.cshtml" />
+    <Content Include="Views\Message\SendBox.cshtml" />
+    <Content Include="Views\Message\AddMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
