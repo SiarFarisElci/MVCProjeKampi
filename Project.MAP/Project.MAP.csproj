@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Optionals\AboutMap.cs" />
+    <Compile Include="Optionals\AdminMap.cs" />
     <Compile Include="Optionals\BaseMap.cs" />
     <Compile Include="Optionals\CategoryMap.cs" />
     <Compile Include="Optionals\ContactMap.cs" />

@@ -26,9 +26,11 @@ namespace Project.DAL.Context
             modelBuilder.Configurations.Add(new HeadingMap());
             modelBuilder.Configurations.Add(new MessageMap());
             modelBuilder.Configurations.Add(new ImageFilesMap());
+            modelBuilder.Configurations.Add(new AdminMap());
         }
 
         public DbSet<Write>  Writes { get; set; }
+        public DbSet<Admin>   Admins { get; set; }
         public DbSet<ImageFile>   ImageFiles { get; set; }
         public DbSet<Message>   Messages { get; set; }
         public DbSet<Category>   Categories  { get; set; }

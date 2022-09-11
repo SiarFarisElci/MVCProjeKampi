@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="DesingPatterns\GenericRepository\BaseRep\BaseRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\AboutRepository.cs" />
+    <Compile Include="DesingPatterns\GenericRepository\ConcRep\AdminRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\CategoryRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\ContactRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\ContentRepository.cs" />
