@@ -66,6 +66,7 @@
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\ContactRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\ContentRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\HeadingRepository.cs" />
+    <Compile Include="DesingPatterns\GenericRepository\ConcRep\ImageFilesRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\MessageRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\ConcRep\WriteRepository.cs" />
     <Compile Include="DesingPatterns\GenericRepository\InRep\IRepository.cs" />

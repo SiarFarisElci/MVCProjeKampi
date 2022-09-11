@@ -141,6 +141,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
@@ -154,6 +155,7 @@
     <Compile Include="VMClasses\ContactVM.cs" />
     <Compile Include="VMClasses\ContentVM.cs" />
     <Compile Include="VMClasses\HeadingVM.cs" />
+    <Compile Include="VMClasses\ImageVM.cs" />
     <Compile Include="VMClasses\MessageVM.cs" />
     <Compile Include="VMClasses\WriteVM.cs" />
   </ItemGroup>
@@ -1999,6 +2001,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\indir.png" />
+    <Content Include="Images\SertifikaOnlineTicaret.PNG" />
+    <Content Include="Images\Udemy sertifika.PNG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="AdminLTE-3.0.4\.babelrc" />
@@ -2304,6 +2309,7 @@
     <Content Include="Views\Message\AddMessage.cshtml" />
     <Content Include="Views\Message\GetInboxMessageDetail.cshtml" />
     <Content Include="Views\Message\GetSendMessageDetail.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

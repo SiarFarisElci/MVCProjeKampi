@@ -57,6 +57,7 @@
     <Compile Include="Optionals\ContactMap.cs" />
     <Compile Include="Optionals\ContentMap.cs" />
     <Compile Include="Optionals\HeadingMap.cs" />
+    <Compile Include="Optionals\ImageFilesMap.cs" />
     <Compile Include="Optionals\MessageMap.cs" />
     <Compile Include="Optionals\WriteMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
