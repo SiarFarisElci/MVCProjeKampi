@@ -152,6 +152,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VMClasses\AboutVM.cs" />
+    <Compile Include="VMClasses\AdminVM.cs" />
     <Compile Include="VMClasses\CategoryVM.cs" />
     <Compile Include="VMClasses\ContactVM.cs" />
     <Compile Include="VMClasses\ContentVM.cs" />
@@ -2428,6 +2429,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="AuthorizeClasses\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

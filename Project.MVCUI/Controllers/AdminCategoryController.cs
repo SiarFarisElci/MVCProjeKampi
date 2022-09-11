@@ -21,6 +21,7 @@ namespace Project.MVCUI.Controllers
         }
 
         // GET: Category
+        [Authorize]
         public ActionResult GetCategoryList()
         {
             CategoryVM cvm = new CategoryVM
