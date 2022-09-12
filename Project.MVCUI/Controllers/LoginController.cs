@@ -13,9 +13,11 @@ namespace Project.MVCUI.Controllers
     public class LoginController : Controller
     {
         AdminRepository _aRep;
+        WriteRepository _wRep;
 
         public LoginController()
         {
+            _wRep = new WriteRepository();
             _aRep = new AdminRepository();
         }
         // GET: Login
@@ -44,5 +46,27 @@ namespace Project.MVCUI.Controllers
            
             
         }
+
+        public ActionResult WriterLogin()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult WriterLogin(Write write)
+        {
+            var writeUserInfo = _wRep.FirstOrDefault(x => x.WriteMail == write.WriteMail && x.WritePassword == write.WritePassword);
+            if (writeUserInfo != null)
+            {
+                FormsAuthentication.SetAuthCookie(writeUserInfo.WriteMail, false);
+                Session["WriteUserName"] = writeUserInfo.WriteMail;
+                return RedirectToAction("MyContent", "WritePanelContent");
+            }
+            else
+            {
+                return RedirectToAction("WriterLogin");
+            }
+           
+        }
+
     }
 }

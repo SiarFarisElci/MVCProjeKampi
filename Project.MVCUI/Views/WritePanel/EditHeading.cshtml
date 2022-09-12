@@ -1,0 +1,81 @@
+﻿@model HeadingVM
+
+@{
+    ViewBag.Title = "EditHeading";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<h2>EditHeading</h2>
+
+
+<style>
+    .genislik {
+        width: 300px;
+    }
+</style>
+
+@using (Html.BeginForm("EditHeading", "WritePanel", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Kategori Ekleme Sayfası
+                </header>
+                @Html.HiddenFor(x => x.Heading.ID)
+                @Html.HiddenFor(x => x.Heading.WriteID)
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        <label class="col-sm-2">Heading Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Heading.HeadingName, new { @class = "form-control genislik" })
+                            @*@Html.ValidationMessageFor(x => x.Category.CategoryName)*@
+
+                        </div>
+                    </div>
+
+
+                    <br /> <br />
+
+
+                    <div class="form-group">
+                        <label class="col-sm-2">Category Name</label>
+                        <div class="col-sm-10">
+                            @Html.DropDownListFor(x => x.Heading.CategoryID, new SelectList(Model.Categories, "ID", "CategoryName"), "Lutfen seciniz", new { @class = "form-control genislik" })
+
+                        </div>
+                    </div>
+
+                    <br /> <br />
+                    @*<div class="form-group">
+                        <label class="col-sm-2">Yazar Name</label>
+                        <div class="col-sm-10">
+                            @Html.DropDownListFor(x => x.Heading.WriteID, new SelectList(Model.Writes, "ID", "FullName"), "Lutfen seciniz", new { @class = "form-control genislik" })
+
+                        </div>
+                    </div>*@
+
+                    <br /> <br />
+
+                    <div class="form-group">
+                        <label class="col-sm-2">İşlem : </label>
+                        <div class="col-sm-10">
+                            <button class="btn btn-primary">Guncelle</button>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+}
